@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# Check if the input is a 4-digit integer
+if [[ "$1" =~ ^[0-9]{4}$ ]]; then
+    # If it's a 4-digit integer, hash it using SHA-256
+    echo -n "$1" | sha256sum
+else
+    # If it's not a 4-digit integer, print an error message
+    echo "It's not 4 digits!"
+fi
